@@ -186,7 +186,7 @@ def create_elements(style):
 
     style.element_create('Spinbox.field', 'image', 'combo-entry',
                          ('focus', 'combo-entry-focus'),
-                         border=4, padding=(6, 0, 0, 0), sticky='news')
+                         border=4, padding=(6, 1, 1, 1), sticky='news')
 
 
     style.element_create('Spinbox.uparrow', 'image', 'up-background',

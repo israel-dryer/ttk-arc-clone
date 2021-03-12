@@ -55,14 +55,21 @@ mb.menu.add_checkbutton(label='Spring')
 
 ttk.Scale(frame, from_=0, to=100, value=25).pack(fill='x')
 
-tv = ttk.Treeview(frame, columns=[1, 2, 3], show='headings', height=2)
+tv = ttk.Treeview(frame, columns=[1, 2, 3], height=2)
 tv.heading(1, text='Name')
 tv.heading(2, text='Job Title')
 tv.heading(3, text='Department')
-tv.insert('', 'end', values=['Richard Webb', 'Senior Accountant', 'Federal Tax'])
-tv.insert('', 'end', values=['Mary Hawking', 'Manager', 'Marketing'])
-tv.insert('', 'end', values=['Tom Riddle', 'Intern', 'Sales'])
+tv.insert('', 'end', 'accounting', text='Accounting')
+tv.insert('accounting', 'end', values=['Richard Webb', 'Senior Accountant', 'Federal Tax'])
+tv.insert('accounting', 'end', values=['Mary Hawking', 'Manager', 'Marketing'])
+tv.insert('accounting', 'end', values=['Tom Riddle', 'Intern', 'Sales'])
+tv.insert('', 'end', 'finance', text='Finance')
+tv.insert('finance', 'end', values=['Richard Webb', 'Senior Accountant', 'Federal Tax'])
+tv.insert('finance', 'end', values=['Mary Hawking', 'Manager', 'Marketing'])
+tv.insert('finance', 'end', values=['Tom Riddle', 'Intern', 'Sales'])
+
 tv.pack(fill='x', pady=10)
+
 
 btn_frame = ttk.Frame(frame)
 sb = ttk.Spinbox(btn_frame, values=['spinbox option 1', 'spinbox option 2', 'spinbox option 3'])
